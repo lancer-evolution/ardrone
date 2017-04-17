@@ -23,18 +23,18 @@ xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
 	<!-- psd sensor -->
 	<xacro:include filename="$(find cvg_sim_gazebo)/urdf/sensors/psd_sensor.urdf.xacro" />
-	<xacro:psd_sensor name="psd_left" parent="base_link" ros_topic="psd_left" update_rate="30" min_range="0.01" max_range="0.5" ray_count="2" visualize="true">
+	<xacro:psd_sensor name="psd_left" parent="base_link" ros_topic="front_left" update_rate="30" sim_name="ardrone" min_range="0.01" max_range="0.5" ray_count="2" visualize="true">
       <origin xyz="0.26 0.14 0.02" rpy="0 0 0"/>
     </xacro:psd_sensor>
-	<xacro:psd_sensor name="psd_right" parent="base_link" ros_topic="psd_right" update_rate="30" min_range="0.01" max_range="0.5" ray_count="2" visualize="true">
+	<xacro:psd_sensor name="psd_right" parent="base_link" ros_topic="front_right" update_rate="30" sim_name="ardrone" min_range="0.01" max_range="0.5" ray_count="2" visualize="true">
       <origin xyz="0.26 -0.14 0.02" rpy="0 0 0"/>
 	  <!-- <origin xyz="0.26 -0.14 0.02" rpy="0 ${90*M_PI/180} 0"/> -->
     </xacro:psd_sensor>
-	<xacro:psd_sensor name="psd_left_side" parent="base_link" ros_topic="psd_left_side" update_rate="30" min_range="0.01" max_range="0.5" ray_count="2" visualize="true">
+	<xacro:psd_sensor name="psd_left_side" parent="base_link" ros_topic="left_side" update_rate="30" sim_name="ardrone" min_range="0.01" max_range="0.5" ray_count="2" visualize="true">
       <origin xyz="0.0 0.24 0.02" rpy="0 0 ${90*M_PI/180}"/>
 	  <!-- <origin xyz="0.26 -0.14 0.02" rpy="0 ${90*M_PI/180} 0"/> -->
     </xacro:psd_sensor>
-	<xacro:psd_sensor name="psd_right_side" parent="base_link" ros_topic="psd_right_side" update_rate="30" min_range="0.01" max_range="0.5" ray_count="2" visualize="true">
+	<xacro:psd_sensor name="psd_right_side" parent="base_link" ros_topic="right_side" update_rate="30" sim_name="ardrone" min_range="0.01" max_range="0.5" ray_count="2" visualize="true">
       <origin xyz="0. -0.24 0.02" rpy="0 0 -${90*M_PI/180}"/>
 	  <!-- <origin xyz="0.26 -0.14 0.02" rpy="0 ${90*M_PI/180} 0"/> -->
     </xacro:psd_sensor>

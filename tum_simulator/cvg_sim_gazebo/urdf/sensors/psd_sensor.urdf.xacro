@@ -10,7 +10,7 @@
   <property name="field_of_view" value="${1*M_PI/180}" />
 
   
-  <xacro:macro name="psd_sensor" params="name parent *origin ros_topic update_rate min_range max_range ray_count visualize">
+  <xacro:macro name="psd_sensor" params="name parent *origin ros_topic update_rate sim_name min_range max_range ray_count visualize">
 
 	<joint name="${name}_joint" type="fixed">
       <xacro:insert_block name="origin" />
@@ -77,7 +77,7 @@
 
         <plugin name="gazebo_ros_${name}_controller" filename="libhector_gazebo_ros_sonar.so">
           <gaussianNoise>0.000</gaussianNoise>
-          <topicName>${ros_topic}</topicName>
+          <topicName>${sim_name}/psd/${ros_topic}</topicName>
           <frameId>${name}_link</frameId>
         </plugin>
 		<visualize>${visualize}</visualize>
