@@ -12,7 +12,7 @@ droneの種類は3つ
 roslaunch cvg_sim_gazebo rviz.launch model:="`rospack find cvg_sim_gazebo`/urdf/quadrotor.urdf.xacro"
 ```
 <div align="center">
-<img src="image/rviz.png" width="200">
+<img src="image/rviz.png" width="400">
 </div>
 
 * droneとセンサ類
@@ -23,7 +23,7 @@ roslaunch cvg_sim_gazebo rviz.launch model:="`rospack find cvg_sim_gazebo`/urdf/
 
 
 <div align="center">
-<img src="image/quadrotor_sensors.png" width="200">
+<img src="image/quadrotor_sensors.png" width="400">
 </div>
 
 **このとき、`roscore`しているとGrobal Optionがエラーになる**
@@ -35,7 +35,7 @@ roslaunch cvg_sim_gazebo gazebo.launch model:="`rospack find cvg_sim_gazebo`/urd
 ```
 
 <div align="center">
-<img src="image/gazebo.jpg" width="200">
+<img src="image/gazebo.jpg" width="400">
 </div>
 
 ## xacro to urdf
@@ -61,7 +61,7 @@ $ urdf_to_graphiz quadrotor_sensors.urdf
 ```
 
 <div align="center">
-<img src="image/quadrotor_hokuyo_utm30lx.jpg" width="200">
+<img src="image/quadrotor_hokuyo_utm30lx.jpg" width="400">
 </div>
 
 ##### 配信されているtfを表示する
