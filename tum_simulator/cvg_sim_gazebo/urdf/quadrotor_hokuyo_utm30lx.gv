@@ -1,0 +1,20 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"bottom_link" [label="bottom_link"];
+"ardrone_base_bottomcam" [label="ardrone_base_bottomcam"];
+"front_link" [label="front_link"];
+"ardrone_base_frontcam" [label="ardrone_base_frontcam"];
+"sonar_link" [label="sonar_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "bottom_joint" [label="xyz: 0.15 0 0 \nrpy: 0 1.5708 0"]
+"bottom_joint" -> "bottom_link"
+"bottom_link" -> "bottom_optical_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -5.55112e-17 -1.5708"]
+"bottom_optical_joint" -> "ardrone_base_bottomcam"
+"base_link" -> "front_joint" [label="xyz: 0.21 0 0.01 \nrpy: 0 -0 0"]
+"front_joint" -> "front_link"
+"front_link" -> "front_optical_joint" [label="xyz: 0 0 0 \nrpy: -1.5708 -5.55112e-17 -1.5708"]
+"front_optical_joint" -> "ardrone_base_frontcam"
+"base_link" -> "sonar_joint" [label="xyz: -0.15 0 0 \nrpy: 0 1.5708 0"]
+"sonar_joint" -> "sonar_link"
+}

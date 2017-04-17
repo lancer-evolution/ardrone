@@ -13,17 +13,17 @@
    <param name="robot_description" command="$(find xacro)/xacro.py '$(arg model)'" />
    
    <!-- push robot_description to factory and spawn robot in gazebo -->
-   <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
-   args="-param robot_description
-   -urdf
-   -x '$(arg x)'
-   -y '$(arg y)'
-   -z '$(arg z)'
-   -R '$(arg R)'
-   -P '$(arg P)'
-   -Y '$(arg Y)'
-   -model quadrotor"
-     respawn="false" output="screen"/>
+   <!-- <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" -->
+   <!-- args="-param robot_description -->
+   <!-- -urdf -->
+   <!-- -x '$(arg x)' -->
+   <!-- -y '$(arg y)' -->
+   <!-- -z '$(arg z)' -->
+   <!-- -R '$(arg R)' -->
+   <!-- -P '$(arg P)' -->
+   <!-- -Y '$(arg Y)' -->
+   <!-- -model quadrotor" -->
+   <!--   respawn="false" output="screen"/> -->
      
    <!-- start robot state publisher -->
    <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" >

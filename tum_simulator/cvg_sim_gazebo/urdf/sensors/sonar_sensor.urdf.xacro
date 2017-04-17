@@ -61,6 +61,7 @@ xmlns:xacro="http://ros.org/wiki/xacro"
           <topicName>${ros_topic}</topicName>
           <frameId>${name}_link</frameId>
         </plugin>
+		<visualize>true</visualize>
       </sensor>
     </gazebo>
   </xacro:macro>
