@@ -7,7 +7,7 @@ Parrot社のAR.droneを使った研究をするための開発環境の構築
 ```bash
 git clone git@github.com:lancer-evolution/ardrone.git
 cd ~/catkin_ws
-rosdep install rosdep install -i --from-paths src
+rosdep install -i --from-paths src
 catkin_make
 ```
 ##### エラー対処
