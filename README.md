@@ -49,7 +49,7 @@ gui
 ```bash
 rosrun tum_ardrone drone_gui
 ```
-↑Abobe launch
+↑Above launch
 ```bash
 roslaunch tum_ardrone tum_ardrone.launch
 ```
