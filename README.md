@@ -2,7 +2,7 @@
 
 Parrot社のAR.droneを使った研究をするための開発環境の構築
 
-## Instllation
+## Installation
 
 ```bash
 git clone git@github.com:lancer-evolution/ardrone.git
