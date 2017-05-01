@@ -2,6 +2,22 @@
 
 Parrot社のAR.droneを使った研究をするための開発環境の構築
 
+## Instllation
+
+```bash
+git clone git@github.com:lancer-evolution/ardrone.git
+cd ~/catkin_ws
+rosdep install rosdep install -i --from-paths src
+catkin_make
+```
+##### エラー対処
+
+* -lglut的なエラー
+```bash
+sudo apt-get install freeglut3-dev
+```
+* その他.........
+
 ## Run Simulator
 
 tum_simulator
