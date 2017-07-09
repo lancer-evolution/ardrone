@@ -8,7 +8,6 @@ Panels:
         - /Status1
         - /RobotModel1
         - /RobotModel1/Links1
-        - /TF1
         - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 595
@@ -52,66 +51,21 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Alpha: 0.5
+    - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
       Enabled: true
       Links:
-        All Links Enabled: false
+        All Links Enabled: true
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        ardrone_base_bottomcam:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        ardrone_base_frontcam:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
         base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        bottom_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        front_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
-        psd_left_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        psd_left_side_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        psd_right_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        psd_right_side_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        sonar_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -123,49 +77,13 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        ardrone_base_bottomcam:
-          Value: false
-        ardrone_base_frontcam:
-          Value: false
-        base_link:
-          Value: false
-        bottom_link:
-          Value: false
-        front_link:
-          Value: false
-        psd_left_link:
-          Value: true
-        psd_left_side_link:
-          Value: true
-        psd_right_link:
-          Value: true
-        psd_right_side_link:
-          Value: true
-        sonar_link:
-          Value: false
       Marker Scale: 0.5
       Name: TF
       Show Arrows: false
       Show Axes: false
       Show Names: true
       Tree:
-        base_link:
-          bottom_link:
-            ardrone_base_bottomcam:
-              {}
-          front_link:
-            ardrone_base_frontcam:
-              {}
-          psd_left_link:
-            {}
-          psd_left_side_link:
-            {}
-          psd_right_link:
-            {}
-          psd_right_side_link:
-            {}
-          sonar_link:
-            {}
+        {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -204,10 +122,10 @@ Visualization Manager:
         Z: -0.0444057
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 1.1548
+      Pitch: 0.754796
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.78994
+      Yaw: 0.459939
     Saved: ~
 Window Geometry:
   Displays:
@@ -225,5 +143,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1216
-  X: 1489
-  Y: 79
+  X: 2098
+  Y: 160

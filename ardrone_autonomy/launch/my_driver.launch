@@ -1,0 +1,18 @@
+<launch>
+  <!-- <arg name="droneip" default="192.168.1.1" /> -->
+  <node name="ardrone_driver" pkg="ardrone_autonomy" type="ardrone_driver" output="screen" clear_params="true">
+	<param name="outdoor" value="1" />
+    <param name="flight_without_shell" value="1" />
+    <param name="navdata_demo" value="0" />
+    <param name="realtime_navdata" value="True" />
+    <param name="realtime_video" value="True" />
+	
+	<param name="do_imu_caliberation" value="True" />
+	<!-- Enables the standard /ardrone/navdata, imu and mag topics. If not specified, defaults to TRUE -->
+    <param name="enable_legacy_navdata" value="true" />
+		
+    <!-- <param name="looprate" value="50" /> -->
+  </node>
+  <node name="drone_gui" pkg="tum_ardrone" type="drone_gui">
+  </node>
+</launch>
