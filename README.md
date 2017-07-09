@@ -24,7 +24,7 @@ tum_simulator
 ```bash
 roslaunch cvg_sim_gazebo ardrone_testworld.launch
 ```
-![](/pict/sim.png)
+![](pict/sim.png)
 
 ## Run Driver
 
@@ -54,7 +54,7 @@ Above launch↓
 ```bash
 roslaunch tum_ardrone tum_ardrone.launch
 ```
-![](/pict/autopilot.png)
+![](pict/autopilot.png)
 
 
 
