@@ -16,6 +16,11 @@ catkin_make
 ```bash
 sudo apt-get install freeglut3-dev
 ```
+* -lblas, -llapack
+```bash
+sudo apt-get install liblapack-dev
+```
+
 * その他.........
 
 ## Run Simulator
@@ -33,7 +38,7 @@ For AR.drone
 roslaunch tum_ardrone ardrone_driver.launch
 ```
 ```bash
-rosrun ardrone_autonomy ardrone_driver
+rosrun ardrone_autonomy my_driver
 ```
 ## tum_ardrone
 
