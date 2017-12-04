@@ -5,7 +5,7 @@
 <!-- =================================================================================== -->
 <robot name="quadrotor_hokuyo_utm30lx">
   
-  <link name="base_link">
+  <link name="ardrone_base_link">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -27,7 +27,7 @@
   <!-- Sonar height sensor -->
   <joint name="sonar_joint" type="fixed">
     <origin rpy="0 1.57079632679 0" xyz="-0.15 0.0 0.0"/>
-    <parent link="base_link"/>
+    <parent link="ardrone_base_link"/>
     <child link="sonar_link"/>
   </joint>
 

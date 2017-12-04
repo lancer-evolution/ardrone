@@ -6,7 +6,7 @@
 
   <!-- Quadrotor Gazebo Plugins -->
   <xacro:macro name="quadrotor_plugins">
-    <canonicalBody>base_link</canonicalBody>
+    <canonicalBody>ardrone_base_link</canonicalBody>
     <quadrotor_sensors/>
     <quadrotor_controller/>
   </xacro:macro>

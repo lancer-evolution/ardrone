@@ -678,6 +678,7 @@ void ARDroneDriver::PublishTF()
   tf_base_front.stamp_ = ros::Time::now();
   tf_base_bottom.stamp_ = ros::Time::now();
   tf_broad.sendTransform(tf_base_front);
+  //vp_os_delay(250);
   tf_broad.sendTransform(tf_base_bottom);
 }
 

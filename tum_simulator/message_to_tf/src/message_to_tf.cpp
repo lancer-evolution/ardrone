@@ -30,7 +30,7 @@ void sendTransform(geometry_msgs::Pose const &pose, const std_msgs::Header& head
   if (!g_frame_id.empty()) tf.frame_id_ = g_frame_id;
   tf.stamp_ = header.stamp;
   if (!g_child_frame_id.empty()) child_frame_id = g_child_frame_id;
-  if (child_frame_id.empty()) child_frame_id = "base_link";
+  if (child_frame_id.empty()) child_frame_id = "ardrone_base_link";
 
   tf::Quaternion orientation;
   tf::quaternionMsgToTF(pose.orientation, orientation);
@@ -71,7 +71,7 @@ void sendTransform(geometry_msgs::Pose const &pose, const std_msgs::Header& head
     tf.frame_id_ = g_stabilized_frame_id;
   }
 
-  // base_link transform (roll, pitch)
+  // ardrone_base_link transform (roll, pitch)
   tf.child_frame_id_ = child_frame_id;
   tf.setOrigin(position);
   tf.setRotation(tf::createQuaternionFromRPY(roll, pitch, yaw));
@@ -96,14 +96,14 @@ void imuCallback(sensor_msgs::Imu const &imu) {
   tf.frame_id_ = g_stabilized_frame_id;
   tf.stamp_ = imu.header.stamp;
   if (!g_child_frame_id.empty()) child_frame_id = g_child_frame_id;
-  if (child_frame_id.empty()) child_frame_id = "base_link";
+  if (child_frame_id.empty()) child_frame_id = "ardrone_base_link";
 
   tf::Quaternion orientation;
   tf::quaternionMsgToTF(imu.orientation, orientation);
   tfScalar yaw, pitch, roll;
   tf::Matrix3x3(orientation).getEulerYPR(yaw, pitch, roll);
 
-  // base_link transform (roll, pitch)
+  // ardrone_base_link transform (roll, pitch)
   tf.child_frame_id_ = child_frame_id;
   tf.setRotation(tf::createQuaternionFromRPY(roll, pitch, 0.0));
   addTransform(transforms, tf);
